@@ -9,7 +9,7 @@ def test_scorer_perfect_consistency():
         [1.0, 1.0, 1.0],
         [1.0, 1.0, 1.0]
     ])
-    variations = ["A", "B", "C"]
+    variations = [{"prompt": "A"}, {"prompt": "B"}, {"prompt": "C"}]
     
     results = calculate_scores(matrix, variations)
     
@@ -23,7 +23,7 @@ def test_scorer_zero_consistency():
         [0.0, 1.0, 0.0],
         [0.0, 0.0, 1.0]
     ])
-    variations = ["A", "B", "C"]
+    variations = [{"prompt": "A"}, {"prompt": "B"}, {"prompt": "C"}]
     
     results = calculate_scores(matrix, variations)
     
@@ -34,7 +34,7 @@ def test_scorer_zero_consistency():
 def test_scorer_single_variation():
     # Scorer should handle edge case of 1 variation safely
     matrix = np.array([[1.0]])
-    variations = ["Only me"]
+    variations = [{"prompt": "Only me"}]
     
     results = calculate_scores(matrix, variations)
     

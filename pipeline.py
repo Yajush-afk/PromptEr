@@ -18,7 +18,7 @@ def run_evaluation(
     # 2. Get text responses
     responses = []
     for var in variations:
-        resp = generator_model.generate(var, **GENERATION_PARAMS)
+        resp = generator_model.generate(var["prompt"], **GENERATION_PARAMS)
         responses.append(resp)
         
     # 3. Embed responses

@@ -24,8 +24,8 @@ def calculate_scores(similarity_matrix: np.ndarray, variations: list[str]) -> di
     divergent_pair = {
         "index_1": int(i_div),
         "index_2": int(j_div),
-        "prompt_1": variations[i_div],
-        "prompt_2": variations[j_div],
+        "prompt_1": variations[i_div]["prompt"],
+        "prompt_2": variations[j_div]["prompt"],
         "similarity": float(upper_tri_values[min_idx])
     }
 

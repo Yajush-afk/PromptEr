@@ -12,10 +12,10 @@ def test_generate_variations_content():
     vars = generate_variations(base_prompt, 5)
     
     # The original should be the first entry
-    assert vars[0] == base_prompt
+    assert vars[0]["prompt"] == base_prompt
     
     # All others should be strings containing the base prompt (in our current simplistic logic)
     for var in vars[1:]:
-        assert isinstance(var, str)
-        assert len(var) > len(base_prompt)
-        assert base_prompt in var
+        assert isinstance(var["prompt"], str)
+        assert len(var["prompt"]) > len(base_prompt)
+        assert base_prompt in var["prompt"]
