@@ -1,0 +1,15 @@
+# Ignore the learning hints file so the user can keep private notes
+learning_hints.md
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+
+# Streamlit
+.streamlit/

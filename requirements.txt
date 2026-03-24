@@ -1,0 +1,9 @@
+transformers
+sentence-transformers
+streamlit
+numpy
+pandas
+scikit-learn
+torch
+plotly
+pytest
