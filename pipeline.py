@@ -1,10 +1,3 @@
-"""
-Pipeline Module
-
-Orchestrates the PromptEr evaluation run.
-Connects the functional modules together with the HF models.
-"""
-
 from variation_generator import generate_variations
 from models.generator import TextGenerator
 from models.embedder import ResponseEmbedder
@@ -18,15 +11,6 @@ def run_evaluation(
     embedder_model: ResponseEmbedder,
     num_variations: int = 5
 ) -> dict:
-    """
-    Executes the full prompt robustness analysis pipeline.
-    
-    Args:
-        base_prompt: The initial prompt.
-        generator_model: Instance of the text generation wrapper.
-        embedder_model: Instance of the embedding wrapper.
-        num_variations: Number of variations to create.
-    """
     
     # 1. Generate variations
     variations = generate_variations(base_prompt, num_variations)
